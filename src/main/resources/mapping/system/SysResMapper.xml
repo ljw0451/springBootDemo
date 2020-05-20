@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ljw.mapper.system.SysResMapper">
+
+    <select id="findPermissionByRoleId" resultType="com.ljw.entity.system.ResDto">
+        SELECT
+          *
+        FROM
+        (role e,res s)
+        right join role_res es on s.res_id = es.res_id and e.role_id = es.role_id
+        where e.role_id = #{roleId}
+    </select>
+
+</mapper>
