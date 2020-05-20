@@ -27,9 +27,4 @@ public class PersionTestController {
         return list;
     }
 
-    @RequestMapping("/testljw")
-    public String aa(){
-
-        return "login";
-    }
 }
